@@ -5,9 +5,12 @@ import SingleRoom from "./pages/SingleRoom";
 import Error from "./pages/Error";
 import { Route, Routes, Switch } from "react-router-dom"; //For using Routes and Route
 
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
     <>
+      <Navbar></Navbar>
       <Routes>
         {/* Route have to be wraped arount Routes */}
         <Route exact path="/" element={<Home></Home>}></Route>
