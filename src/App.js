@@ -4,7 +4,6 @@ import { Rooms } from "./pages/Rooms";
 import SingleRoom from "./pages/SingleRoom";
 import Error from "./pages/Error";
 import { Route, Routes, Switch } from "react-router-dom"; //For using Routes and Route
-
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -22,11 +21,6 @@ function App() {
         {/* This will lead to error page, as it does not match with specified routes */}
         {/* <Route path="/:slug" element={<Error></Error>}></Route> ✅ */}
       </Routes>
-
-      {/* <Home></Home>
-        <Rooms></Rooms>
-        <SingleRoom></SingleRoom>
-        <Error></Error> */}
     </>
   );
 }
