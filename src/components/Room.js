@@ -31,6 +31,7 @@ export default function Room({ room }) {
 }
 
 Room.propTypes = {
+  // this is basically a static type checking
   // as the properties are inside another object room, hence
   room: PropTypes.shape({
     name: PropTypes.string.isRequired,

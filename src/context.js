@@ -44,11 +44,18 @@ class RoomProvider extends Component {
     return tempItems;
   }
 
+  //finding single room - function for giving value to a perticular single rom com via context
+  getRoom = (slug) => {
+    let temRooms = [...this.state.rooms]; // getting all rooms info in array
+    const room = temRooms.find((room) => room.slug === slug); // finding that specific room
+    return room;
+  };
+
   render() {
     return (
       // <RoomContext.Provider value={"hello"}>
       // <RoomContext.Provider value={{greeting:this.state.greeting,name:this.state.name}}>
-      <RoomContext.Provider value={{ ...this.state }}>
+      <RoomContext.Provider value={{ ...this.state, getRoom: this.getRoom }}>
         {/*Copying state properties n giving to the value prop*/}
 
         {/* Need to render children as it will warp the whole app component */}
